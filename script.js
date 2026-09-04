@@ -163,7 +163,7 @@ const renderContent = () => {
   }
 }
 
-function renderHome() {
+const renderHome = () => {
   const homeMetaItems = [
     {
       icon: 'fa-solid fa-location-dot',
@@ -248,7 +248,7 @@ function renderHome() {
   })
 }
 
-function renderAbout() {
+const renderAbout = () => {
   
   infoPanel.innerHTML = `
     ${lang.about.content.map(el => `
@@ -262,7 +262,7 @@ function renderAbout() {
   `
 }
 
-function renderProjects() {
+const renderProjects = () => {
 
   infoPanel.innerHTML = `
     <div class="projectPage">
@@ -282,7 +282,7 @@ function renderProjects() {
 
 }
 
-function renderContact() {
+const renderContact = () => {
   
   infoPanel.innerHTML = `
     <h2>${lang.contact.title}</h2>
@@ -303,7 +303,7 @@ function renderContact() {
   `
 }
 
-async function get_data() {
+const get_data = async () => {
   const response = await fetch(`./lang_data/${currentLanguage}.json`);
   lang = await response.json();
 
